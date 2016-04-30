@@ -3,14 +3,35 @@
 </head>
 
 <body>
-    <h1>Connect Four by Nigs</h1> {{> hello}}
+    {{> hello}}
 </body>
 
 <template name="hello">
-    <h3>Current player: <strong style="color: {{player}}">{{player}}</strong>'s turn</h3>
-    <h3>Game status: {{won}}</h3>
-    <button>Reset</button>
-    <br/>
-    <br/>
-    <canvas id="mycanvas" width="700" height="600"></canvas>
+    <div id="etc">
+        <h1>Connect Four by Nigs</h1>
+        <small>MeteorJS, HTML5 Canvas</small>
+        <p>Current player: <strong style="color: {{player}}">{{player}}</strong>'s turn</p>
+        <p>Game status: {{won}}</p>
+        <input type="radio" id="a" name="opponent" value="HumanVsHuman" checked/>
+        <label for="a">Human Vs. Human</label>
+        <br/>
+        <input type="radio" id="b" name="opponent" value="HumanVsComputer" />
+        <label for="b">Human Vs. Computer</label>
+        <br/>
+        <label for="computer_level">Computer Level:</label>
+        <select id="computer_level" disabled="disabled">
+            <option value="1">Useless</option>
+            <option value="2">Newb</option>
+            <option value="3" selected="selected">Average</option>
+            <option value="4">Difficult</option>
+            <option value="5">GODLIKE</option>
+        </select>
+        <br/>
+        <br/>
+        <br/>
+        <button id="reset">New Game</button>
+    </div>
+    <div id="canvas">
+        <canvas id="mycanvas" width="700" height="600"></canvas>
+    </div>
 </template>
