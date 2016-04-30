@@ -145,7 +145,7 @@ function drawCircle(ctx, x, y, color) {
 function drop(ctx, x, color) {
 
     // might not work for older browsers.
-    var snd = new Audio("coin-drop-5.mp3"); // buffers automatically when created
+    var snd = new Audio("http://wornoutbackpack.com/wp-content/uploads/2016/04/coin-drop-5.mp3"); // buffers automatically when created
     console.log("dropping " + color + "@" + x);
     for (y = MAX_Y - 1; y >= 0; y--) {
         if (STATE_TABLE[x][y] === WHITE) {
